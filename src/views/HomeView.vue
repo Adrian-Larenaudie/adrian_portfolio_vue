@@ -48,13 +48,13 @@ export default {
                             await new Promise(resolve => setTimeout(resolve, 1200));
                             for (let k = wordSwitcher.querySelectorAll('span').length -1; k >= 0; k--) {
                                 wordSwitcher.querySelectorAll('span')[k].classList.add('wordDisappear');
-                                await new Promise(resolve => setTimeout(resolve, 150));
+                                await new Promise(resolve => setTimeout(resolve, 100));
                                 wordSwitcher.querySelectorAll('span')[k].remove();
                             }
                             currentIndex = i;
                             await new Promise(resolve => setTimeout(resolve, 500));
                         }
-                        await new Promise(resolve => setTimeout(resolve, 150));
+                        await new Promise(resolve => setTimeout(resolve, 100));
                         let newSpan = document.createElement('span');
                         newSpan.textContent = arrayOfWords[i][j];
                         wordSwitcher.appendChild(newSpan);
@@ -75,7 +75,7 @@ export default {
     display: inline-block;
     animation-name: wordReveal;
     animation-delay: 0;
-    animation-duration: .4s;
+    animation-duration: .3s;
     animation-iteration-count: 1;
 }
 @keyframes wordReveal {
@@ -92,7 +92,7 @@ export default {
     display: inline-block;
     animation-name: wordDisappear;
     animation-delay: 0;
-    animation-duration: .4s;
+    animation-duration: .3s;
     animation-iteration-count: 1;
 }
 @keyframes wordDisappear {
