@@ -3,15 +3,15 @@
         <div>
             <h1 class="main_content_home_title">
                 Bienvenue, je suis
-                <span :style="{color: getCurrentTheme.word}" class="solo_word">Adrian</span></h1>
+                <span :style="{color: getCurrentTheme.word}">Adrian</span></h1>
             <h2 class="main_content_home_subtitle">
                 <span>Développeur web</span>
                 <span id="wordSwitcher" :style="{color: getCurrentTheme.word}" class="main_content_word_scroller solo_word"></span>
             </h2>
-            <!-- menu de la page home -->
-            <HomeMenu />
         </div>
     </div>
+    <!-- menu de la page home -->
+    <HomeMenu />
 </template>
 
 <script>
@@ -25,14 +25,10 @@ export default {
     },
     computed: {
         ...mapGetters('utils', ['getCurrentTheme']),
-    },
-    data() {
-        return {
-            currentWord: '',
-        }
-    },  
+    }, 
     mounted() {
-        const arrayOfWords = [
+        try {
+            const arrayOfWords = [
                 'Nodejs',
                 'Vuejs',
                 'mySql',
@@ -67,6 +63,9 @@ export default {
                     }  
                 }
             }, 1000);
+        } catch (error) {
+            console.log(error);
+        }
     },
 }
 </script>

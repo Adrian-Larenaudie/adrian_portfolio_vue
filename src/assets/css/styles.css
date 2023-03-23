@@ -142,7 +142,7 @@ svg:hover, .footer_contact:hover {
     #wordSwitcher {
         min-height: 2.5rem;
     }
-  }
+}
 .home_navigation {
     font-size: 1rem;
     display: flex;
@@ -158,10 +158,10 @@ svg:hover, .footer_contact:hover {
 }
 @media (max-width: 650px) {
     .main_content_home_title {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     .main_content_home_subtitle {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     #wordSwitcher {
         min-height: 1.2rem;
@@ -181,6 +181,31 @@ svg:hover, .footer_contact:hover {
 /* HOME */
 
 /* ABOUT */
+.main_content_about_title {
+    font-size: 4vw;
+    margin: 1rem;
+}
+.main_content_about_block_text {
+    width: 60%;
+    margin: 2rem;
+}
+.main_content_about_paragraph {
+    line-height: 1.5rem;
+    font-size: .9rem;
+    margin: 1rem;
+    text-align: left;
+    word-spacing: -.2rem;
+}
+@media (max-width: 650px) {
+    .main_content_about_title {
+        font-size: 2rem;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .main_content_about_title {
+       font-size: 3.5rem;
+    }
+}
 /* ABOUT */
 
 /* WORK */
