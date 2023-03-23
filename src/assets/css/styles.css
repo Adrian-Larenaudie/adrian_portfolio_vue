@@ -9,7 +9,6 @@
 html {
     font-family: 'Jet Brains Mono', sans-serif;
 }
-
 .application {
     min-height: 100vh;
     min-width: 100vw;
@@ -155,9 +154,7 @@ svg:hover, .footer_contact:hover {
     text-decoration: none;
     text-transform: capitalize;
     font-style: italic;
-}
-.home_link:hover {
-    text-decoration: underline;
+    transition: .2s;
 }
 @media (max-width: 650px) {
     .main_content_home_title {

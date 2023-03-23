@@ -5,6 +5,7 @@ import store from './store';
 import './assets/css/reset.css';
 import './assets/css/styles.css';
 import './assets/css/menuMobile.css';
+import './assets/css/animations.css';
 
 const app = createApp(App);
 
