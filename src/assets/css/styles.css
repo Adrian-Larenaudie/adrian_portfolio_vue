@@ -103,6 +103,9 @@ svg {
 svg:hover, .footer_contact:hover {
     transform: translateY(-10%);
 }
+svg path {
+    transition: .2s;
+}
 .footer_contact_block {
     margin: 1rem;
     cursor: pointer;
@@ -144,10 +147,10 @@ svg:hover, .footer_contact:hover {
     }
 }
 .home_navigation {
+    margin: 1rem 0 0 0;
     font-size: 1rem;
     display: flex;
     justify-content: center;
-    margin-top: 5vw;
 }
 .home_link {
     margin: 0 .5rem;
@@ -170,7 +173,6 @@ svg:hover, .footer_contact:hover {
         font-size: .7rem;
         display: flex;
         justify-content: center;
-        margin-top: 3rem;
     }
 }
 @media (max-width: 450px) {
@@ -184,9 +186,10 @@ svg:hover, .footer_contact:hover {
 .main_content_about_title {
     font-size: 4vw;
     margin: 1rem;
+    margin-top: 4rem;
 }
 .main_content_about_block_text {
-    width: 60%;
+    width: 70%;
     margin: 2rem;
 }
 .main_content_about_paragraph {
@@ -196,9 +199,17 @@ svg:hover, .footer_contact:hover {
     text-align: left;
     word-spacing: -.2rem;
 }
+@media (max-width: 1100px) {
+    .main_content_about_block_text {
+        width: 80%;
+    }
+}
 @media (max-width: 650px) {
     .main_content_about_title {
         font-size: 2rem;
+    }
+    .main_content_about_block_text {
+        width: 95%;
     }
 }
 @media screen and (min-width: 1400px) {

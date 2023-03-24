@@ -1,7 +1,9 @@
 <template>
 
     <div class="main_content_block_about">
-        <h1 class="main_content_about_title">Quelques <span :style="{color: getCurrentTheme.word}">mots</span></h1>
+        <h1 class="main_content_about_title">
+            <span id="wordingAnimation"></span>  
+            <span :style="{color: getCurrentTheme.word}"> mots</span></h1>
         <div class="main_content_about_block_text">
             <p class="main_content_about_paragraph">
                 Courant 2021 après une période de quelques mois à me former aux téchnologies du web en autodidacte, je décide d'intégrer une école pour me professionnaliser.
@@ -20,8 +22,6 @@
         </div>
 
     </div>
-    <!-- menu de la page home -->
-    <HomeMenu />
 
 </template>
 
@@ -37,5 +37,57 @@ export default {
         computed: {
             ...mapGetters('utils', ['getCurrentTheme']),
         }, 
+        mounted() {
+            /* petit algo d'animation des lettres du mot "word" */
+            const word = 'Quelques';
+            for (let i = 0; i < word.length; i++) {
+                const newSpan = document.createElement('span');
+                newSpan.textContent = word[i];
+                wordingAnimation.appendChild(newSpan);
+            }
+            const letterTags = wordingAnimation.querySelectorAll('span')
+            setTimeout(async() => {
+                for (let i = 0; i < letterTags.length; i++) {
+                    await new Promise(resolve => setTimeout(resolve, 150));
+                    letterTags[i].classList.add('letterBigger');   
+                    if(i === letterTags.length - 1) {
+                        i = -1;
+                        await new Promise(resolve => setTimeout(resolve, 6000));
+                        letterTags.forEach(letterTag => {
+                            letterTag.classList.remove('letterBigger'); 
+                        });
+                    }       
+                }
+            }, 1000);
+            
+        }
 }
 </script>
+
+<style>
+/* animation de disparition de lettre */
+.letterBigger {
+    display: inline-block;
+    animation-name: letterBigger;
+    animation-delay: 0;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+}
+@keyframes letterBigger {
+    0% {
+        transform: scale(1);       
+    }
+    25% {
+        transform: scale(1.3);
+    }
+    50% {
+        transform: scale(1); 
+    }
+    75% {
+        transform: scale(.8); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+</style>

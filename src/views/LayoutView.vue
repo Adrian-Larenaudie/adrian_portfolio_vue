@@ -1,5 +1,5 @@
 <template>
-    <div :style="{backgroundColor: getCurrentTheme.background, color: getCurrentTheme.text}" class="application" id="application">
+    <div :style="{background: getCurrentTheme.backgroundGradient, background: getCurrentTheme.linearGradient/* backgroundColor: getCurrentTheme.background */, color: getCurrentTheme.text}" class="application" id="application">
 
         <ThemeSelector />
 

@@ -10,8 +10,7 @@
             </h2>
         </div>
     </div>
-    <!-- menu de la page home -->
-    <HomeMenu />
+
 </template>
 
 <script>
@@ -37,6 +36,7 @@ export default {
                 'React/Redux',
                 'NoSql',
             ];
+            /* petit algo d'apparition/disparition des mots du tableau lettre par lettre */
             setTimeout(async() => {
                 let currentIndex = 0;
                 for(let i = 0; i < arrayOfWords.length; i++) {
@@ -71,6 +71,7 @@ export default {
 </script>
 
 <style>
+/* animations d'apparition de lettre */
 .wordReveal {
     display: inline-block;
     animation-name: wordReveal;
@@ -88,6 +89,8 @@ export default {
       transform: scale(1);   
     }
 }
+
+/* animation de disparition de lettre */
 .wordDisappear {
     display: inline-block;
     animation-name: wordDisappear;
