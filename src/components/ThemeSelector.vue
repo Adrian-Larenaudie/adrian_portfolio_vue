@@ -21,7 +21,10 @@ export default {
         ...mapMutations('utils', ['changeThemeMutation']),
 
         onClick(event) {
-            this.changeThemeMutation(event.target.id)
+            this.changeThemeMutation(event.target.id);
+            document.querySelectorAll('.social_network svg path').forEach(svg => {
+               svg.style.fill = this.getCurrentTheme.text; 
+            });
         }
     }
 }

@@ -32,10 +32,20 @@ export default {
     },
     methods: {
     onMouseLeave(event) {
-        event.target.querySelector('path').style.fill = this.getCurrentTheme.text;       
+        try {
+            event.target.querySelector('path').style.fill = this.getCurrentTheme.text;    
+        } catch (error) {
+            //console.log(error);
+        }
+           
     },
     onMouseOver(event) {
-        event.target.querySelector('path').style.fill = this.getCurrentTheme.word;
+        try {
+            event.target.querySelector('path').style.fill = this.getCurrentTheme.word;
+        } catch (error) {
+            //console.log(error);
+        }
+       
     },
     },
 }
