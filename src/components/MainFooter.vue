@@ -1,7 +1,7 @@
 <template>
     <!-- le footer -->
     <footer class="footer_block">
-        <HomeMenu />
+        <!-- <HomeMenu /> -->
         <div :style="{backgroundColor: getCurrentTheme.text}" class="footer_segment"></div>
         <div class="social_network">
             <svg  @mouseover="onMouseOver" @mouseleave="onMouseLeave" :style="{fill: getCurrentTheme.text}" class="social_network_svg" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="30px" height="30px">

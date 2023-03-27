@@ -1,11 +1,12 @@
 <template>
-    <div @mousemove="onMouseMove" :style="{background: getCurrentTheme.backgroundGradient, background: getCurrentTheme.linearGradient/* backgroundColor: getCurrentTheme.background */, color: getCurrentTheme.text}" class="application" id="application">
+    <div :style="{background: getCurrentTheme.backgroundGradient, background: getCurrentTheme.linearGradient/* backgroundColor: getCurrentTheme.background */, color: getCurrentTheme.text}" class="application" id="application">
 
         <ThemeSelector />
 
         <BackgroundWord />
 
         <!-- contenu principale de la page -->
+        <HomeMenu />
         <main class="main_content_block">
             <RouterView/>
             <MainFooter />
@@ -25,6 +26,7 @@ import BackgroundWord from '@/components/BackgroundWord.vue';
 import BurgerMenu from '@/components/menus/BurgerMenu.vue';
 import MobileMenu from '@/components/menus/MobileMenu.vue';
 import MainFooter from '@/components/MainFooter.vue';
+import HomeMenu from '@/components/menus/HomeMenu.vue';
 import { mapGetters } from 'vuex';
 
 export default {
@@ -35,6 +37,7 @@ export default {
         BurgerMenu,
         MobileMenu,
         MainFooter,
+        HomeMenu,
     },
     computed: {
         ...mapGetters('utils', ['getCurrentTheme']),
@@ -45,7 +48,7 @@ export default {
         };
     },
     methods: {
-        onMouseMove(event) {
+       /*  onMouseMove(event) {
            // console.log(this.lastMove);
             if(this.lastMove.x === 0 && this.lastMove.y === 0) {
                 this.lastMove.x = event.clientX + 35;
@@ -158,7 +161,7 @@ export default {
                     // 4eme cas on ne se déplace pas
                     } else if(x === this.lastMove.x && y === this.lastMove.y) {
                         this.createParticle(x, y);
-                    // 5eme cas on se déplca vers le bas
+                    // 5eme cas on se déplace vers le bas
                     }  else if(x === this.lastMove.x && y > this.lastMove.y) {
                         this.createParticle(x, y + i);
                     // 6eme cas on se déplace vers le haut
@@ -199,7 +202,7 @@ export default {
             setTimeout(() => {
                 particle.remove();
             }, 1000);
-        }
+        } */
     },
 }
 </script>
