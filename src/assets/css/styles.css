@@ -11,7 +11,6 @@ html {
 }
 .application {
     min-height: 100vh;
-    min-width: 100vw;
     display: flex;
     flex-direction: column;
 }
@@ -183,16 +182,17 @@ svg path {
 /* HOME */
 
 /* ABOUT */
-.main_content_about_title {
+.main_content_about_title, .main_content_block_works_title {
     font-weight: 600;
     width: 70%;
+    max-width: 1000px;
     font-size: 4vw;
-    margin-top: 3rem;
     margin-left: 2rem;
 }
 .main_content_about_block_text {
     width: 70%;
     margin: 2rem;
+    max-width: 1000px;
 }
 .main_content_about_paragraph {
     line-height: 1.5rem;
@@ -207,7 +207,7 @@ svg path {
     }
 }
 @media (max-width: 650px) {
-    .main_content_about_title {
+    .main_content_about_title, .main_content_block_works_title {
         font-size: 2rem;
     }
     .main_content_about_block_text, .main_content_about_title {
@@ -215,16 +215,103 @@ svg path {
     }
 }
 @media (max-width: 450px) {
-    .main_content_about_title {
+    .main_content_about_title, .main_content_block_works_title {
         margin-top: 5rem;
     }
 }
 @media screen and (min-width: 1400px) {
-    .main_content_about_title {
+    .main_content_about_title, .main_content_block_works_title {
        font-size: 3.5rem;
     }
 }
 /* ABOUT */
 
 /* WORK */
+.main_content_block_works {
+
+}
+
+.main_content_block_works_title {
+    margin-left: 0;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.main_content_works_card_displayer {
+    width: 80%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.work_card {
+    border-radius: .2rem;
+    border: solid 1px;
+    padding: .8rem;
+    margin: .5rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.work_card_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.work_card_header_title {
+    font-size: 1.2rem;
+}
+
+.work_card_links_area {
+    display: flex;
+}
+
+.work_card_main_content {
+    
+}
+
+.work_card_description {
+    margin-bottom: 1rem;
+}
+
+.work_card_footer {
+    display: flex;
+}
+
+.work_card_techno_list {
+    display: flex;
+}
+.work_card_techno_list li {
+    margin-right: .5rem;
+}
+@media (max-width: 1000px) {
+    .main_content_works_card_displayer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 800px) {
+    .main_content_works_card_displayer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 555px) {
+    .main_content_works_card_displayer {
+        width: 69%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .main_content_block_works_title {
+        width: 69%;
+    }
+    .work_card {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 /* WORK */

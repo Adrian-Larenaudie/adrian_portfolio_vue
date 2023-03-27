@@ -34,33 +34,32 @@ export default {
     components: {
             HomeMenu,
         },
-        computed: {
-            ...mapGetters('utils', ['getCurrentTheme']),
-        }, 
-        mounted() {
-            /* petit algo d'animation des lettres du mot "word" */
-            const word = 'Quelques';
-            for (let i = 0; i < word.length; i++) {
-                const newSpan = document.createElement('span');
-                newSpan.textContent = word[i];
-                wordingAnimation.appendChild(newSpan);
-            }
-            const letterTags = wordingAnimation.querySelectorAll('span')
-            setTimeout(async() => {
-                for (let i = 0; i < letterTags.length; i++) {
-                    await new Promise(resolve => setTimeout(resolve, 150));
-                    letterTags[i].classList.add('letterBigger');   
-                    if(i === letterTags.length - 1) {
-                        i = -1;
-                        await new Promise(resolve => setTimeout(resolve, 6000));
-                        letterTags.forEach(letterTag => {
-                            letterTag.classList.remove('letterBigger'); 
-                        });
-                    }       
-                }
-            }, 1000);
-            
+    computed: {
+        ...mapGetters('utils', ['getCurrentTheme']),
+    }, 
+    mounted() {
+        /* petit algo d'animation des lettres du mot "word" */
+        const word = 'Quelques';
+        for (let i = 0; i < word.length; i++) {
+            const newSpan = document.createElement('span');
+            newSpan.textContent = word[i];
+            wordingAnimation.appendChild(newSpan);
         }
+        const letterTags = wordingAnimation.querySelectorAll('span')
+        setTimeout(async() => {
+            for (let i = 0; i < letterTags.length; i++) {
+                await new Promise(resolve => setTimeout(resolve, 150));
+                letterTags[i].classList.add('letterBigger');   
+                if(i === letterTags.length - 1) {
+                    i = -1;
+                    await new Promise(resolve => setTimeout(resolve, 6000));
+                    letterTags.forEach(letterTag => {
+                        letterTag.classList.remove('letterBigger'); 
+                    });
+                }       
+            }
+        }, 1000);       
+    }
 }
 </script>
 
