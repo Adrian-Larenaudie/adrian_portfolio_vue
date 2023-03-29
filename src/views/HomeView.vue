@@ -1,11 +1,11 @@
 <template>
     <div class="main_content_block_home">
         <div>
-            <h1 class="main_content_home_title">
+            <h1 id="homeTitle" class="main_content_home_title">
                 <span> Bienvenue,&nbsp;</span>
                 <span>je suis&nbsp;</span>
                 <span :style="{color: getCurrentTheme.word}">Adrian</span></h1>
-            <h2 class="main_content_home_subtitle">
+            <h2 id="homeSubtitle" class="main_content_home_subtitle">
                 <span>Développeur web</span>
                 <span id="wordSwitcher" :style="{color: getCurrentTheme.word}" class="main_content_word_scroller solo_word"></span>
             </h2>
@@ -64,6 +64,19 @@ export default {
                     }  
                 }
             }, 1000);
+
+            /* animations reveal */
+            homeTitle.style.visibility = 'hidden';
+            homeSubtitle.style.visibility = 'hidden';
+            setTimeout(() => {
+                homeTitle.style.visibility = 'visible';
+                homeTitle.classList.add('revealFromLeft');
+            }, 200);
+            setTimeout(() => {
+                homeSubtitle.style.visibility = 'visible';
+                homeSubtitle.classList.add('revealFromLeft');
+            }, 400);
+            
         } catch (error) {
             console.log(error);
         }

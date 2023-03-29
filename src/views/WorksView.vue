@@ -1,13 +1,13 @@
 <template>
 
     <div class="main_content_block_works">
-        <h1 class="main_content_block_works_title"> 
+        <h1 id="worksTitle" class="main_content_block_works_title"> 
             <span>Mes&nbsp;</span>
-            <span class="wordingAnimation_realisations" id="wordingAnimation" :style="{color: getCurrentTheme.word}"></span>
+            <span class="wordingAnimation_realisations" id="wordAnimation" :style="{color: getCurrentTheme.word}"></span>
         </h1>
-        <div class="main_content_works_card_displayer">
+        <div id="cardContainer" class="main_content_works_card_displayer">
 
-            <div v-for="work in getWorks" class="work_card" :style="{borderColor: getCurrentTheme.text}">
+            <div v-for="work in getWorks" class="work_card" :id="work.name" :key="work.name" :style="{borderColor: getCurrentTheme.text}">
                 <div>
                     <header class="work_card_header">
                         <h2 class="work_card_header_title" :style="{color: getCurrentTheme.word}">{{ work.name }}</h2>
@@ -84,9 +84,9 @@ export default {
         for (let i = 0; i < word.length; i++) {
             const newSpan = document.createElement('span');
             newSpan.textContent = word[i];
-            wordingAnimation.appendChild(newSpan);
+            wordAnimation.appendChild(newSpan);
         }
-        const letterTags = wordingAnimation.querySelectorAll('span')
+        const letterTags = wordAnimation.querySelectorAll('span')
         setTimeout(async() => {
             for (let i = 0; i < letterTags.length; i++) {
                 await new Promise(resolve => setTimeout(resolve, 50));
@@ -99,7 +99,32 @@ export default {
                     });
                 }       
             }
-        }, 1000);       
+        }, 1000);  
+        
+        /* animations reveal */
+        worksTitle.style.visibility = 'hidden';
+        cardContainer.style.visibility = 'hidden';
+        setTimeout(() => {
+            const cardsTags = cardContainer.querySelectorAll('.work_card');
+            for (let i = 0; i < cardsTags.length; i++) {
+                cardsTags[i].style.visibility = 'hidden';
+            }   
+            setTimeout(async() => {
+                cardContainer.style.visibility = 'visible';
+                for (let i = 0; i < cardsTags.length; i++) {
+                    await new Promise(resolve => setTimeout(resolve, 100));
+                    cardsTags[i].style.visibility = 'visible';
+                    cardsTags[i].classList.add('revealFromTop');    
+                }
+            }, 100);
+            setTimeout(() => {
+                worksTitle.style.visibility = 'visible';
+                worksTitle.classList.add('revealFromLeft');
+            }, 800);
+        }, 0);
+
+       
+
     }
 }
 </script>

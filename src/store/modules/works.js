@@ -4,7 +4,7 @@ export default {
         works: [
             {
                 name: 'Art of Clowey',
-                description: 'Réalisation d\'un site pour l\'artiste Clowey. Un front office pour les visiteurs afin de découvrir le travail de l\'artiste et un backoffice réservé aux admins afin de piloter le contenu que propose l\'application.',
+                description: 'Site personnel pour l\'artiste Clowey. Un front office pour les visiteurs afin de découvrir le travail de l\'artiste et un backoffice réservé aux admins afin de piloter le contenu que propose l\'application.',
                 techno: ['VUEJS', 'NODEJS', 'SQL'],
                 links: {
                     github: 'https://github.com/Adrian-Larenaudie/drag_drop_puzzle',
@@ -13,7 +13,7 @@ export default {
             },
             {
                 name: 'Jormungand snake game',
-                description: 'Il s\'agit d\'un jeu Snake codé à ma façon selon les règles du jeu original.',
+                description: 'Il s\'agit d\'un jeu Snake codé à ma façon en me basant sur les règles du jeu original.',
                 techno: ['HTML', 'CSS', 'JS'],
                 links: {
                     github: 'https://github.com/Adrian-Larenaudie/jormungand_snake_game',
@@ -22,7 +22,7 @@ export default {
             },
             {
                 name: 'Tetris game',
-                description: 'Il s\'agit d\'un jeu Tetris codé à ma façon inspiré des règles du jeu original.',
+                description: 'Il s\'agit d\'un jeu Tetris codé à ma façon en m\'inspirant des règles du jeu original.',
                 techno: ['HTML', 'CSS', 'JS'],
                 links: {
                     github: 'https://github.com/Adrian-Larenaudie/home_made_tetris',
@@ -31,7 +31,7 @@ export default {
             },
             {
                 name: 'Portfolio Adrian',
-                description: 'Le site sur lequel vous vous trouvé, déployé rapidemment sur surge réalisé en vuejs.',
+                description: 'Le site sur lequel vous vous trouvez, déployé sur surge et réalisé en vuejs.',
                 techno: ['VUEJS'],
                 links: {
                     github: 'https://github.com/Adrian-Larenaudie/adrian_portfolio_vue',
@@ -40,7 +40,7 @@ export default {
             },
             {
                 name: 'Pixel art canvas',
-                description: 'Inspiré par la pixel war et dans le but de pratiquer vuejs, j\'ai réaliser mon propre canvas pour vous permettre de réaliser de magnifique création en pixel art.',
+                description: 'Inspiré par la pixel war et dans le but de pratiquer vuejs, j\'ai réalisé mon propre canvas pour permettre à qui le souhaite de réaliser de magnifique dessin en pixel art.',
                 techno: ['VUEJS'],
                 links: {
                     github: 'https://github.com/Adrian-Larenaudie/pixel_art_canvas',
@@ -58,7 +58,7 @@ export default {
             },
             {
                 name: 'Retro wave timer',
-                description: 'Minuteur codé en JavaScript le tout dans un style retro wave pour celles et ceux qui apprécieront.',
+                description: 'Minuteur codé en JavaScript le tout dans un style retro wave avec une référence au cri de Whilelm.',
                 techno: ['HTML', 'CSS', 'JS'],
                 links: {
                     github: 'https://github.com/Adrian-Larenaudie/rw_timer_ft_wilhelm',
@@ -67,7 +67,7 @@ export default {
             },
             {
                 name: 'Poke memory game',
-                description: 'Jeu de mémoire sur le thème pokémon, plusieurs niveaux de difficulté pour se tester.',
+                description: 'Jeu memory game sur le thème pokémon, plusieurs niveaux de difficulté pour tester ça mémoire.',
                 techno: ['HTML', 'CSS', 'JS'],
                 links: {
                     github: 'https://github.com/Adrian-Larenaudie/poke_memory_card',

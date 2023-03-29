@@ -1,11 +1,11 @@
 <template>
 
     <div class="main_content_block_about">
-        <h1 class="main_content_about_title">
+        <h1 id="aboutTitle" class="main_content_about_title">
             <span id="wordingAnimation"></span> 
             <span>&nbsp;</span> 
             <span :style="{color: getCurrentTheme.word}">mots</span></h1>
-        <div class="main_content_about_block_text">
+        <div id="paragraphContainer" class="main_content_about_block_text">
             <p class="main_content_about_paragraph">
                 Courant 2021 après une période de quelques mois à me former aux téchnologies du web en autodidacte, je décide d'intégrer une école pour me professionnaliser.
             </p>
@@ -59,7 +59,28 @@ export default {
                     });
                 }       
             }
-        }, 1000);       
+        }, 1000);  
+        
+        /* animations reveal */
+        aboutTitle.style.visibility = 'hidden';
+        const paragraphsTags = paragraphContainer.querySelectorAll('p');
+        for (let i = 0; i < paragraphsTags.length; i++) {
+                paragraphsTags[i].style.visibility = 'hidden';       
+        }
+
+        setTimeout(() => {
+            aboutTitle.style.visibility = 'visible';
+            aboutTitle.classList.add('fade');
+        }, 800);
+        
+        setTimeout(async() => {
+            for (let i = 0; i < paragraphsTags.length; i++) {
+                await new Promise(resolve => setTimeout(resolve, 100));
+                paragraphsTags[i].style.visibility = 'visible'; 
+                paragraphsTags[i].classList.add('revealFromLeft');             
+            }  
+        }, 100);
+        
     }
 }
 </script>
