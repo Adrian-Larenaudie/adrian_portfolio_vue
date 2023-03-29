@@ -99,7 +99,7 @@ export default {
                     });
                 }       
             }
-        }, 1000);  
+        }, 1200);  
         
         /* animations reveal */
         worksTitle.style.visibility = 'hidden';
@@ -128,3 +128,31 @@ export default {
     }
 }
 </script>
+
+<style>
+/* animation des lettres */
+.letterBigger {
+    display: inline-block;
+    animation-name: letterBigger;
+    animation-delay: 0;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+}
+@keyframes letterBigger {
+    0% {
+        transform: scale(1);       
+    }
+    25% {
+        transform: scale(1.3);
+    }
+    50% {
+        transform: scale(1); 
+    }
+    75% {
+        transform: scale(.8); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+</style>

@@ -86,7 +86,7 @@ export default {
 </script>
 
 <style>
-/* animation de disparition de lettre */
+/* animation des lettres */
 .letterBigger {
     display: inline-block;
     animation-name: letterBigger;
