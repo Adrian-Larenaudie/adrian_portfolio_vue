@@ -31,22 +31,22 @@ export default {
         ...mapGetters('utils', ['getCurrentTheme']),
     },
     methods: {
-    onMouseLeave(event) {
-        try {
-            event.target.querySelector('path').style.fill = this.getCurrentTheme.text;    
-        } catch (error) {
-            //console.log(error);
-        }
-           
-    },
-    onMouseOver(event) {
-        try {
-            event.target.querySelector('path').style.fill = this.getCurrentTheme.word;
-        } catch (error) {
-            //console.log(error);
-        }
-       
-    },
+        onMouseLeave(event) {
+            try {
+                event.target.querySelector('path').style.fill = this.getCurrentTheme.text;    
+            } catch (error) {
+                //console.log(error);
+            }
+            
+        },
+        onMouseOver(event) {
+            try {
+                event.target.querySelector('path').style.fill = this.getCurrentTheme.word;
+            } catch (error) {
+                //console.log(error);
+            }
+        
+        },
     },
 }
 </script>

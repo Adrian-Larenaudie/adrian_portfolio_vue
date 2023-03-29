@@ -93,7 +93,7 @@ html {
     height: .5px;
     border-right: .2rem;
 }
-svg {
+.social_network_svg {
     transition: .2s;
     cursor: pointer;
     margin: .2rem;
@@ -101,10 +101,10 @@ svg {
 .footer_contact {
     transition: .2s;
 }
-svg:hover, .footer_contact:hover {
+.social_network_svg:hover, .footer_contact:hover {
     transform: translateY(-10%);
 }
-svg path {
+.social_network_svg path {
     transition: .2s;
 }
 .footer_contact_block {
@@ -205,13 +205,16 @@ svg path {
     .main_content_about_block_text, .main_content_about_title {
         width: 80%;
     }
+    .main_content_about_title {
+        margin-top: 3rem;
+    }
 }
 @media (max-width: 650px) {
     .main_content_about_title, .main_content_block_works_title {
         font-size: 2rem;
     }
     .main_content_about_block_text, .main_content_about_title {
-        width: 95%;
+        width: 80%;
     }
 }
 @media (max-width: 450px) {
@@ -254,7 +257,14 @@ svg path {
     padding: .8rem;
     margin: .5rem;
     width: 100%;
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .2s;
+}
+
+.work_card:hover {
+    transform: translateY(-5%);
 }
 
 .work_card_header {
@@ -278,8 +288,9 @@ svg path {
 }
 
 .work_card_description {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-size: .9rem;
+    line-height: 1.2rem;
 }
 
 .work_card_footer {
@@ -291,20 +302,33 @@ svg path {
 .work_card_techno_list {
     display: flex;
 }
+
 .work_card_techno_list li {
     margin-right: .5rem;
 }
+
+.works_link_svg {
+    transition: .2s;
+    cursor: pointer;
+    margin: .2rem;
+}
+
+.works_link_svg:hover {
+    transform: translateY(-10%);
+}
+
+
 @media (max-width: 1000px) {
     .main_content_works_card_displayer {
         grid-template-columns: repeat(3, 1fr);
     }
 }
-@media (max-width: 800px) {
+@media (max-width: 920px) {
     .main_content_works_card_displayer {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-@media (max-width: 555px) {
+@media (max-width: 660px) {
     .main_content_works_card_displayer {
         width: 69%;
         grid-template-columns: repeat(1, 1fr);
@@ -313,6 +337,7 @@ svg path {
         width: 69%;
     }
     .work_card {
+        min-height: 200px;
         margin-left: 0;
         margin-right: 0;
     }

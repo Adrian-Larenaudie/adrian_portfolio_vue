@@ -23,8 +23,11 @@ export default {
         onClick(event) {
             this.changeThemeMutation(event.target.id);
             document.querySelectorAll('.social_network svg path').forEach(svg => {
-               svg.style.fill = this.getCurrentTheme.text; 
+               svg.style.fill = this.getCurrentTheme.text;
             });
+            document.querySelectorAll('.work_card_links_area svg').forEach(svg => {
+                svg.style.stroke = this.getCurrentTheme.text; 
+            })
         }
     }
 }

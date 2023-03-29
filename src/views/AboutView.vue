@@ -48,7 +48,7 @@ export default {
         const letterTags = wordingAnimation.querySelectorAll('span')
         setTimeout(async() => {
             for (let i = 0; i < letterTags.length; i++) {
-                await new Promise(resolve => setTimeout(resolve, 150));
+                await new Promise(resolve => setTimeout(resolve, 50));
                 letterTags[i].classList.add('letterBigger');   
                 if(i === letterTags.length - 1) {
                     i = -1;
