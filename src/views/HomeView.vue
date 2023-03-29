@@ -2,7 +2,8 @@
     <div class="main_content_block_home">
         <div>
             <h1 class="main_content_home_title">
-                Bienvenue, je suis
+                <span> Bienvenue,&nbsp;</span>
+                <span>je suis&nbsp;</span>
                 <span :style="{color: getCurrentTheme.word}">Adrian</span></h1>
             <h2 class="main_content_home_subtitle">
                 <span>Développeur web</span>
@@ -45,14 +46,14 @@ export default {
                     };
                     for(let j = 0; j < arrayOfWords[i].length; j++) {
                         if(i !== currentIndex) {
-                            await new Promise(resolve => setTimeout(resolve, 1200));
+                            await new Promise(resolve => setTimeout(resolve, 2000));
                             for (let k = wordSwitcher.querySelectorAll('span').length -1; k >= 0; k--) {
                                 wordSwitcher.querySelectorAll('span')[k].classList.add('wordDisappear');
-                                await new Promise(resolve => setTimeout(resolve, 100));
+                                await new Promise(resolve => setTimeout(resolve, 150));
                                 wordSwitcher.querySelectorAll('span')[k].remove();
                             }
                             currentIndex = i;
-                            await new Promise(resolve => setTimeout(resolve, 500));
+                            await new Promise(resolve => setTimeout(resolve, 0));
                         }
                         await new Promise(resolve => setTimeout(resolve, 100));
                         let newSpan = document.createElement('span');

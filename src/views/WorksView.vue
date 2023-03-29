@@ -1,7 +1,10 @@
 <template>
 
     <div class="main_content_block_works">
-        <h1 class="main_content_block_works_title">Mes <span id="wordingAnimation" :style="{color: getCurrentTheme.word}"></span></h1>
+        <h1 class="main_content_block_works_title"> 
+            <span>Mes&nbsp;</span>
+            <span class="wordingAnimation_realisations" id="wordingAnimation" :style="{color: getCurrentTheme.word}"></span>
+        </h1>
         <div class="main_content_works_card_displayer">
 
             <div v-for="work in getWorks" class="work_card" :style="{borderColor: getCurrentTheme.text}">

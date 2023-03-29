@@ -2,8 +2,9 @@
 
     <div class="main_content_block_about">
         <h1 class="main_content_about_title">
-            <span id="wordingAnimation"></span>  
-            <span :style="{color: getCurrentTheme.word}"> mots</span></h1>
+            <span id="wordingAnimation"></span> 
+            <span>&nbsp;</span> 
+            <span :style="{color: getCurrentTheme.word}">mots</span></h1>
         <div class="main_content_about_block_text">
             <p class="main_content_about_paragraph">
                 Courant 2021 après une période de quelques mois à me former aux téchnologies du web en autodidacte, je décide d'intégrer une école pour me professionnaliser.
