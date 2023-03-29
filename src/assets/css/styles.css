@@ -270,6 +270,7 @@ svg path {
 
 .work_card_links_area {
     display: flex;
+    margin-left: .5rem;
 }
 
 .work_card_main_content {
@@ -278,10 +279,13 @@ svg path {
 
 .work_card_description {
     margin-bottom: 1rem;
+    font-size: .9rem;
 }
 
 .work_card_footer {
     display: flex;
+    font-size: .9rem;
+    font-style: italic;
 }
 
 .work_card_techno_list {
