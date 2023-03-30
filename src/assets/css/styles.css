@@ -91,7 +91,7 @@ html {
     width: 65%;
     margin: 1rem 6rem 1rem 6rem;
     height: .5px;
-    border-right: .2rem;
+    border-radius: .2rem;
 }
 .social_network_svg {
     transition: .2s;
@@ -174,8 +174,15 @@ html {
         justify-content: center;
     }
 }
+/* Segment de navigation */
+.navigation_segment {
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 0;
+
+}
 @media (max-width: 450px) {
-    .home_navigation {
+    .home_navigation, .navigation_segment {
         display: none;
     }
 }

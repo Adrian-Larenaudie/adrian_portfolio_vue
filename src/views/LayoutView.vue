@@ -8,7 +8,8 @@
         <!-- contenu principale de la page -->
         <HomeMenu />
         <main class="main_content_block">
-            <RouterView/>
+            <LogoAL v-if="!getIsQuickLoading"/>
+            <RouterView v-if="getIsQuickLoading"/>
             <MainFooter />
         </main>
 
@@ -27,7 +28,9 @@ import BurgerMenu from '@/components/menus/BurgerMenu.vue';
 import MobileMenu from '@/components/menus/MobileMenu.vue';
 import MainFooter from '@/components/MainFooter.vue';
 import HomeMenu from '@/components/menus/HomeMenu.vue';
-import { mapGetters } from 'vuex';
+import LogoAL from '@/components/LogoAL.vue';
+
+import { mapGetters, mapMutations } from 'vuex';
 
 export default {
     name: 'LayoutView',
@@ -38,16 +41,23 @@ export default {
         MobileMenu,
         MainFooter,
         HomeMenu,
+        LogoAL,
     },
     computed: {
-        ...mapGetters('utils', ['getCurrentTheme']),
+        ...mapGetters('utils', ['getCurrentTheme', 'getIsQuickLoading']),
     },
     data() {
         return {
             lastMove: {x: 0, y: 0},
         };
     },
+    mounted() {
+        setTimeout(() => {
+            this.toggleIsQucikLoading();
+        }, 1000);
+    },
     methods: {
+        ...mapMutations('utils', ['toggleIsQucikLoading']),
        /*  onMouseMove(event) {
            // console.log(this.lastMove);
             if(this.lastMove.x === 0 && this.lastMove.y === 0) {

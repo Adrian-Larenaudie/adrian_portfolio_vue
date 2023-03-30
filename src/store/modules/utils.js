@@ -1,6 +1,7 @@
 export default {
     namespaced: true,
     state:() => ({
+        isQuickLoading: true,
         currentTheme: localStorage.getItem('theme') != undefined ? localStorage.getItem('theme') : 'retroTheme',
         retroTheme: {
             text: '#fef265',
@@ -42,6 +43,9 @@ export default {
         getCurrentTheme: (state) => {
             return state[state.currentTheme];
         },
+        getIsQuickLoading: (state) => {
+            return state.quickLoading;
+        },
     },
 
     actions: {
@@ -55,6 +59,9 @@ export default {
         changeThemeMutation(state, themeName) {
             localStorage.setItem('theme', themeName);
             state.currentTheme = themeName;
+        },
+        toggleIsQucikLoading(state) {
+            state.quickLoading = ! state.quickLoading;
         },
     },
 };

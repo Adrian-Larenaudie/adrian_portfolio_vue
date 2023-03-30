@@ -1,5 +1,8 @@
 <template>
-    <h1 class="logo_al" :style="{color: getCurrentTheme.word}">al</h1>
+    <div class="main_content_block_home">
+        <h1 class="logo_al" :style="{color: getCurrentTheme.word}">al</h1>
+        <div :style="{backgroundColor: getCurrentTheme.background}" class="loading_bar"></div>
+    </div>
 </template>
 
 <script>
@@ -15,6 +18,12 @@ export default {
 
 <style>
 .logo_al {
-    position: absolute;
+    font-weight: 900;
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+.loading_bar {
+    height: 10px;
+    width: 100%;
 }
 </style>

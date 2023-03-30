@@ -4,6 +4,7 @@
         <router-link id="works" @mouseover="onMouseOver" @mouseleave="onMouseLeave" :style="{color: $route.name === 'works' ? getCurrentTheme.word : getCurrentTheme.text}" class="link home_link" to="/works">réalisations</router-link>
         <router-link id="about" @mouseover="onMouseOver" @mouseleave="onMouseLeave" :style="{color: $route.name === 'about' ? getCurrentTheme.word : getCurrentTheme.text}" class="link home_link" to="/about">à propos</router-link>
     </nav>
+    <div :style="{backgroundColor: getCurrentTheme.text}" class="footer_segment navigation_segment"></div>
 </template>
 
 <script>
