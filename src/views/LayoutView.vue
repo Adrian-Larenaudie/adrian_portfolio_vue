@@ -8,8 +8,8 @@
         <!-- contenu principale de la page -->
         <HomeMenu />
         <main class="main_content_block">
-            <LogoAL v-if="!getIsQuickLoading"/>
-            <RouterView v-if="getIsQuickLoading"/>
+            <LogoAL v-if="getIsQuickLoading"/>
+            <RouterView v-if="!getIsQuickLoading"/>              
             <MainFooter />
         </main>
 
@@ -43,6 +43,11 @@ export default {
         HomeMenu,
         LogoAL,
     },
+    data() {
+        return {
+            isLoading: this.getIsQuickLoading,
+        };
+    },
     computed: {
         ...mapGetters('utils', ['getCurrentTheme', 'getIsQuickLoading']),
     },
@@ -52,12 +57,13 @@ export default {
         };
     },
     mounted() {
+        console.log('test1');
         setTimeout(() => {
-            this.toggleIsQucikLoading();
-        }, 1000);
+            this.setIsQucikLoadingToFalse();
+        }, 700);
     },
     methods: {
-        ...mapMutations('utils', ['toggleIsQucikLoading']),
+        ...mapMutations('utils', ['setIsQucikLoadingToFalse']),
        /*  onMouseMove(event) {
            // console.log(this.lastMove);
             if(this.lastMove.x === 0 && this.lastMove.y === 0) {

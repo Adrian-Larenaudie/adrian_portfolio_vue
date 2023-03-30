@@ -1,7 +1,9 @@
 <template>
     <div class="main_content_block_home">
         <h1 class="logo_al" :style="{color: getCurrentTheme.word}">al</h1>
-        <div :style="{backgroundColor: getCurrentTheme.background}" class="loading_bar"></div>
+        <div :style="{backgroundColor: getCurrentTheme.background}" class="loading_bar">
+            <div :style="{backgroundColor: getCurrentTheme.text}" id="loadingBarBis" class="loading_bar_bis"></div>
+        </div>
     </div>
 </template>
 
@@ -13,6 +15,14 @@ export default {
     computed: {
         ...mapGetters('utils', ['getCurrentTheme']),
     },
+    mounted() {
+        setTimeout(async() => {
+            for (let i = 0; i < 100; i++) {
+                await new Promise(resolve => setTimeout(resolve, 5));
+                loadingBarBis.style.width = i + '%';
+            }  
+        }, 0);         
+    },
 }
 </script>
 
@@ -23,7 +33,13 @@ export default {
     text-transform: uppercase;
 }
 .loading_bar {
-    height: 10px;
-    width: 100%;
+    border-radius: .2rem;
+    height: 5px;
+    width: 25%;
+}
+.loading_bar_bis {
+    border-radius: .2rem;
+    height: 5px;
+    width: 0;
 }
 </style>

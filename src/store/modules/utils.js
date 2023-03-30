@@ -44,7 +44,7 @@ export default {
             return state[state.currentTheme];
         },
         getIsQuickLoading: (state) => {
-            return state.quickLoading;
+            return state.isQuickLoading;
         },
     },
 
@@ -60,8 +60,11 @@ export default {
             localStorage.setItem('theme', themeName);
             state.currentTheme = themeName;
         },
-        toggleIsQucikLoading(state) {
-            state.quickLoading = ! state.quickLoading;
+        setIsQucikLoadingToFalse(state) {
+            state.isQuickLoading = false;
+        },
+        setIsQucikLoadingToTrue(state) {
+            state.isQuickLoading = true;
         },
     },
 };
