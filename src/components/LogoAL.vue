@@ -31,6 +31,7 @@ export default {
     font-weight: 900;
     font-size: 6rem;
     text-transform: uppercase;
+    margin-bottom: 2rem;
 }
 .loading_bar {
     border-radius: .2rem;

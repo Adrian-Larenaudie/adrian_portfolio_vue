@@ -25,9 +25,13 @@ export default {
         ...mapGetters('utils', ['getCurrentTheme']),
     }, 
     methods: {
-        ...mapMutations('utils', ['toggleIsMenuMobileOpen']),
+        ...mapMutations('utils', ['toggleIsMenuMobileOpen', 'setIsQucikLoadingToTrue', 'setIsQucikLoadingToFalse']),
 
         onClick(event) {
+            this.setIsQucikLoadingToTrue();
+            setTimeout(() => {
+               this.setIsQucikLoadingToFalse();
+            }, 700);
             const menuBurgerTag = document.getElementById('burger_menu');
             const mobileMenuTag = document.getElementById('menu_mobile');
             const bodyTag = document.querySelector('.application');

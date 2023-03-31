@@ -67,7 +67,7 @@ export default {
             },
             {
                 name: 'Poke memory game',
-                description: 'Jeu memory game sur le thème pokémon, plusieurs niveaux de difficulté pour tester ça mémoire.',
+                description: 'Jeu memory game sur le thème pokémon, plusieurs niveaux de difficulté pour tester sa mémoire.',
                 techno: ['HTML', 'CSS', 'JS'],
                 links: {
                     github: 'https://github.com/Adrian-Larenaudie/poke_memory_card',

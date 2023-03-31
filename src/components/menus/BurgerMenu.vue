@@ -31,6 +31,7 @@ export default {
                 mobileMenuTag.classList.add('translateFromTop');
                 mobileMenuTag.style.display = 'flex';
                 bodyTag.style.overflow = 'hidden';
+                bodyTag.style.width = '100%'
                 bodyTag.style.position = 'fixed';
             } else {
                 mobileMenuTag.classList.remove('translateFromTop');

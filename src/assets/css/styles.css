@@ -87,8 +87,8 @@ html {
     align-items: center;
 }
 .footer_segment {
-    max-width: 750px;
-    width: 65%;
+    max-width: 450px;
+    width: 50%;
     margin: 1rem 6rem 1rem 6rem;
     height: .5px;
     border-radius: .2rem;
