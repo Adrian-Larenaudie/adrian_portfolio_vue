@@ -10,7 +10,7 @@
                 Courant 2021 après une période de quelques mois à me former aux téchnologies du web en autodidacte, je décide d'intégrer une école pour me professionnaliser.
             </p>
             <p class="main_content_about_paragraph">
-                J'effectue deux formations chez <span :style="{color: getCurrentTheme.word}">O'clock</span>, DWWM puis CDA en alternance. Pour le seconde formation j'ai la chance d'intégrer l'entreprise <span :style="{color: getCurrentTheme.word}">ZAION</span> en tant que développeur backend nodejs.
+                J'effectue deux formations chez <a href="https://oclock.io" :style="{color: getCurrentTheme.word}">O'clock</a>, DWWM puis CDA en alternance. Pour le seconde formation j'ai la chance d'intégrer l'entreprise <a href="https://zaion.ai" :style="{color: getCurrentTheme.word}">ZAION</a> en tant que développeur backend nodejs.
             </p>
             <p class="main_content_about_paragraph">
                 Depuis les débuts de mon parcours le développement est un univers qui me passionne.
@@ -19,6 +19,11 @@
             <p class="main_content_about_paragraph">
                 Mes expériences m'ont amenées à comprendre et appliquer les concepts inhérents au développement applicatif ce qui me rend flexible sur la stack technique utilisée tout en ayant un <span :style="{color: getCurrentTheme.word}">profile</span> orienté fullstack javascript.
             </p>
+
+            <p class="main_content_about_paragraph">
+                <a :style="{color: getCurrentTheme.word}" href="../src/assets/resume.pdf" id="mon-pdf-link">Mon CV</a>
+            </p>
+            
 
         </div>
 
@@ -86,6 +91,12 @@ export default {
 </script>
 
 <style>
+a {
+    text-decoration: none;
+}
+a:hover {
+
+}
 /* animation des lettres */
 .letterBigger {
     display: inline-block;
