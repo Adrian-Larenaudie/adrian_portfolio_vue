@@ -57,7 +57,6 @@ export default {
         };
     },
     mounted() {
-        console.log('test1');
         setTimeout(() => {
             this.setIsQucikLoadingToFalse();
         }, 700);

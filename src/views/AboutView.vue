@@ -20,9 +20,9 @@
                 Mes expériences m'ont amenées à comprendre et appliquer les concepts inhérents au développement applicatif ce qui me rend flexible sur la stack technique utilisée tout en ayant un <span :style="{color: getCurrentTheme.word}">profile</span> orienté fullstack javascript.
             </p>
 
-            <p class="main_content_about_paragraph">
-                <a :style="{color: getCurrentTheme.word}" href="@/assets/resume.pdf" id="mon-pdf-link">Mon CV</a>
-            </p>
+<!--             <p class="main_content_about_paragraph">
+                <a :style="{color: getCurrentTheme.word}" href="src/assets/resume.pdf" id="mon-pdf-link">Mon CV</a>
+            </p> -->
             
 
         </div>
