@@ -21,7 +21,7 @@
             </p>
 
             <p class="main_content_about_paragraph">
-                <a :style="{color: getCurrentTheme.word}" href="./resume.pdf" id="mon-pdf-link">Mon CV</a>
+                <a :style="{color: getCurrentTheme.word}" href="@/assets/resume.pdf" id="mon-pdf-link">Mon CV</a>
             </p>
             
 
