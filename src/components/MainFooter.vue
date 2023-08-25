@@ -12,7 +12,7 @@
             </svg>
         </div>
         <div class="footer_contact_block">
-            <p :style="{color: getCurrentTheme.word}" class="footer_contact solo_word">adrian.larenaudie@gmail.com</p>
+            <p @click="onClick" id="adrian_mail" :style="{color: getCurrentTheme.word}" class="footer_contact solo_word">adrian.larenaudie@gmail.com</p>
         </div>
     </footer>
     <!-- footer -->
@@ -47,6 +47,9 @@ export default {
             }
         
         },
+        onClick(event) {
+            window.location.href = "mailto:adrian.larenaudie@gmail.com?subject=from personal web site";
+        }
     },
 }
 </script>

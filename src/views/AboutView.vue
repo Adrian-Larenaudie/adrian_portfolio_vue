@@ -10,7 +10,7 @@
                 Courant 2021 après une période de quelques mois à me former aux téchnologies du web en autodidacte, je décide d'intégrer une école pour me professionnaliser.
             </p>
             <p class="main_content_about_paragraph">
-                J'effectue deux formations chez <a href="https://oclock.io" :style="{color: getCurrentTheme.word}">O'clock</a>, DWWM puis CDA en alternance. Pour le seconde formation j'ai la chance d'intégrer l'entreprise <a href="https://zaion.ai" :style="{color: getCurrentTheme.word}">ZAION</a> en tant que développeur backend nodejs.
+                J'effectue deux formations chez <a href="https://oclock.io" :style="{color: getCurrentTheme.word}">O'clock</a>, DWWM puis CDA en alternance. Pour le seconde formation j'ai la chance d'intégrer l'entreprise <a href="https://zaion.ai" :style="{color: getCurrentTheme.word}">ZAION</a> en tant que développeur backend Nodejs.
             </p>
             <p class="main_content_about_paragraph">
                 Depuis les débuts de mon parcours le développement est un univers qui me passionne.
